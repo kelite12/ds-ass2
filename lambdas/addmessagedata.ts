@@ -32,7 +32,7 @@ export const handler: SNSHandler = async (event) => {
 
     try {
       await dynamo.send(updateCommand);
-      console.log(`Updated image [${id}] - ${metadataType}: ${value}`);
+      console.log(`Updated Image [${id}] - ${metadataType}: ${value}`);
     } catch (err) {
       console.error("Failed to update DynamoDB record", err);
     }
